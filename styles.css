@@ -1,7 +1,9 @@
-body{
-  font-family: 'fantasy', sans-serif;
+body {
+  font-family: "fantasy", sans-serif;
   height: 100vh;
-  background: #333 url('https://image.shutterstock.com/image-photo/wet-asphalt-night-view-neon-260nw-1539868259.jpg') no-repeat center / cover;
+  background: #333
+    url("https://image.shutterstock.com/image-photo/wet-asphalt-night-view-neon-260nw-1539868259.jpg")
+    no-repeat center / cover;
   color: #ccc;
   overflow: hidden;
 }
@@ -14,13 +16,14 @@ body{
   padding: 0 3rem;
 }
 
-h1, h2 {
+h1,
+h2 {
   font-weight: 200;
   margin: 0.4rem;
 }
 
 h1 {
-  font-size: 3.5rem;
+  font-size: 3.6rem;
 }
 
 h2 {
@@ -33,23 +36,23 @@ h2 {
   border-right: 0.2rem solid #777;
 }
 
-@media(min-width: 1200px) {
+@media (min-width: 1200px) {
   h1 {
     font-size: 5rem;
   }
 }
 
-@media(max-width: 800px) {
-.container {
-  padding: 0 1rem;
-}
+@media (max-width: 800px) {
+  .container {
+    padding: 0 1rem;
+  }
 
   h1 {
     font-size: 3rem;
   }
 }
 
-@media(max-width: 500px) {
+@media (max-width: 500px) {
   h1 {
     font-size: 2.5rem;
   }

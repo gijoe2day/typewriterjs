@@ -73,10 +73,10 @@ function init() {
 
 //ES6 class
 class TypeWriter {
-  constructor(txtElement, words, wait = 3000) {
+  constructor(txtElement, words, wait = 2900) {
     this.txtElement = txtElement;
     this.words = words;
-    this.txt = '';
+    this.txt = "";
     this.wordIndex = 0;
     this.wait = parseInt(wait, 10);
     this.type();
@@ -101,13 +101,13 @@ class TypeWriter {
     }
 
     //Insert txt into element
-    this.txtElement.innerHTML =  `<span class="txt">${this.txt}</span>`;
+    this.txtElement.innerHTML = `<span class="txt">${this.txt}</span>`;
 
     //Initial Type speed
     let typeSpeed = 300;
     if (this.isDeleting) {
       typeSpeed /= 2;
-    };
+    }
 
     //if word is complete
     if (!this.isDeleting && this.txt === fullTxt) {
@@ -116,7 +116,7 @@ class TypeWriter {
 
       //  set delet to true
       this.isDeleting = true;
-    } else if (this.isDeleting && this.txt === '') {
+    } else if (this.isDeleting && this.txt === "") {
       this.isDeleting = false;
 
       //  move to next word
@@ -131,13 +131,13 @@ class TypeWriter {
 }
 
 //1.  init on dom load
-document.addEventListener('DOMContentLoaded', init);
+document.addEventListener("DOMContentLoaded", init);
 
 //init app
 function init() {
-  const txtElement = document.querySelector('.txt-type');
-  const words = JSON.parse(txtElement.getAttribute('data-word'));
-  const wait = txtElement.getAttribute('data-wait');
+  const txtElement = document.querySelector(".txt-type");
+  const words = JSON.parse(txtElement.getAttribute("data-word"));
+  const wait = txtElement.getAttribute("data-wait");
 
   // init type TypeWriter
   new TypeWriter(txtElement, words, wait);
